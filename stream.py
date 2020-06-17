@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -15,35 +15,6 @@
     "    access_token_secret\n",
     ")"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "class MyStreamer(TwythonStreamer):\n",
-    "    def on_success(self, data):\n",
-    "        if 'text' in data:\n",
-    "            username = data['user']['screen_name']\n",
-    "            tweet = data['text']\n",
-    "            print(\"@{}: {}\".format(username, tweet))\n",
-    "            \n",
-    "stream = MyStreamer(\n",
-    "    consumer_key,\n",
-    "    consumer_secret,\n",
-    "    access_token,\n",
-    "    access_token_secret\n",
-    ")\n",
-    "stream.statuses.filter(track='raspberry pi')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
